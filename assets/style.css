@@ -134,13 +134,25 @@ nav.main-nav a[aria-current="page"] {
   position: absolute;
   inset: 0;
   opacity: 0;
+  overflow: hidden;
   animation: hero-fade 16s infinite;
   transform-origin: center;
 }
-.hero-slide img {
+.hero-slide .bg-blur {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: blur(35px) brightness(0.6) saturate(1.1);
+  transform: scale(1.2);
+  display: block;
+}
+.hero-slide .bg-sharp {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   display: block;
 }
 .hero-slide.s1 { animation-delay: 0s; }
