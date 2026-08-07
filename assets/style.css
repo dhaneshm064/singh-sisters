@@ -116,13 +116,16 @@ nav.main-nav a[aria-current="page"] {
 
 /* Hero */
 .hero {
-  padding: 120px 0 110px;
+  padding: 72px 0;
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
   text-align: center;
   position: relative;
   overflow: hidden;
   isolation: isolate;
 }
-.hero > .wrap { position: relative; z-index: 2; }
+.hero > .wrap { position: relative; z-index: 2; width: 100%; }
 
 .hero-bg {
   position: absolute;
@@ -138,23 +141,16 @@ nav.main-nav a[aria-current="page"] {
   animation: hero-fade 16s infinite;
   transform-origin: center;
 }
-.hero-slide .bg-blur {
-  position: absolute;
-  inset: 0;
+.hero-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: blur(35px) brightness(0.6) saturate(1.1);
-  transform: scale(1.2);
   display: block;
 }
-.hero-slide .bg-sharp {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-}
+.hero-slide.s1 img { object-position: center 8%; }
+.hero-slide.s2 img { object-position: 68% 12%; }
+.hero-slide.s3 img { object-position: center 15%; }
+.hero-slide.s4 img { object-position: center 55%; }
 .hero-slide.s1 { animation-delay: 0s; }
 .hero-slide.s2 { animation-delay: -4s; }
 .hero-slide.s3 { animation-delay: -8s; }
